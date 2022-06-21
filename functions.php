@@ -49,8 +49,8 @@
 \Artisan::command('microweber:get-app-details', function () {
 
     echo json_encode([
-       'mw_version'=>MW_VERSION,
-       'mw_rootpath'=>MW_ROOTPATH,
+       'version'=>MW_VERSION,
+       'rootpath'=>MW_ROOTPATH,
        'is_installed'=>mw_is_installed(),
     ]);
 
