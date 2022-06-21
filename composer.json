@@ -1,0 +1,17 @@
+{
+  "name": "microweber-modules/app-details-terminal",
+  "description": "App details",
+  "license": "MIT",
+  "homepage": "https://microweber.org/modules/microweber-modules/app-details-terminal",
+  "authors": [
+    {
+      "name": "Microweber",
+      "email": "support@microweber.com"
+    }
+  ],
+  "keywords": [
+    "app-details-terminal"
+  ],
+  "type": "microweber-module",
+  "target-dir": "app-details-terminal"
+}
