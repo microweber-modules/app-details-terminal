@@ -12,7 +12,7 @@
                 'name'=>$template['name'],
                 'author'=>$template['author'],
                 'version'=>$template['version'],
-                'dir_name'=>$template['dir_name'],
+                'target-dir'=>$template['dir_name'],
             ];
         }
     }
@@ -22,10 +22,26 @@
 
 \Artisan::command('microweber:get-modules', function () {
 
+    $modules = [];
+    $getModules = get_modules();
+    if (!empty($getModules)) {
+        foreach ($getModules as $module) {
+            $modules[] = [
+                'name'=>$module['name'],
+                'author'=>$module['author'],
+                'version'=>$module['version'],
+                'target-dir'=>$module['module'],
+            ];
+        }
+    }
+
+    echo json_encode($modules);
 
 });
 
 \Artisan::command('microweber:get-languages', function () {
 
+    $languages = \MicroweberPackages\Translation\TranslationPackageInstallHelper::getAvailableTranslations();
+    return json_encode($languages);
 
 });
