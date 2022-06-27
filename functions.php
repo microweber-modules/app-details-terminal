@@ -51,6 +51,7 @@
     echo json_encode([
        'version'=>MW_VERSION,
        'rootpath'=>MW_ROOTPATH,
+        'site_url'=>site_url(),
        'is_installed'=>mw_is_installed(),
     ]);
 
