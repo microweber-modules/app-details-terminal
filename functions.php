@@ -48,10 +48,17 @@
 
 \Artisan::command('microweber:get-app-details', function () {
 
+    $templateScreenshotUrl = false;
+    if (is_file(templates_path(). template_name() . '/screenshot.jpg')) {
+        $templateScreenshotUrl = templates_url() . template_name() . '/screenshot.jpg';
+    }
+
     echo json_encode([
        'version'=>MW_VERSION,
        'rootpath'=>MW_ROOTPATH,
-        'site_url'=>site_url(),
+       'template'=>template_name(),
+       'template_screenshot_url'=>$templateScreenshotUrl,
+       'site_url'=>site_url(),
        'is_installed'=>mw_is_installed(),
     ]);
 
