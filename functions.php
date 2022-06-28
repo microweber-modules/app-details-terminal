@@ -50,7 +50,7 @@
 
     $templateScreenshotUrl = false;
     if (is_file(templates_path(). template_name() . '/screenshot.jpg')) {
-        $templateScreenshotUrl = '{SITE_URL}' . template_name() . '/screenshot.jpg';
+        $templateScreenshotUrl = '{SITE_URL}userfiles/templates/' . template_name() . '/screenshot.jpg';
     }
 
     echo json_encode([
